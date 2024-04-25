@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION['monID']) || 
+$_SESSION['monID']!== session_id())
+{
+    header("location: ?connect");
+    exit();
+}
+?>
+connect.view.html.php
 <!DOCTYPE html>
 <html lang="en">
 <head>

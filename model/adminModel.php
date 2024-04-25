@@ -16,7 +16,7 @@ function connectAdministrator(PDO $db, string $user, string $password) : bool|st
             $_SESSION = $result;
             
             unset($_SESSION['passwd']);
-            
+            $_SESSION["monID"] = session_id();
             return true;
         }
        
